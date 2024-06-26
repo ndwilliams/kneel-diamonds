@@ -5,7 +5,7 @@ export const MetalOptions = async () => {
 
 	// Iterate the submissions and render through HTML string
 
-	let metalsHTML = '<div id="metals-header">'
+	let metalsHTML = "<div>"
 	for (const metal of metals) {
 		metalsHTML += `<div id=${metal.id}>
         <input type="radio" name="metalsOptions" value=${metal.id}/>
