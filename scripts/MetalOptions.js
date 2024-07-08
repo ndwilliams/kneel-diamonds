@@ -5,17 +5,17 @@ export const MetalOptions = async () => {
 
 	// Iterate the submissions and render through HTML string
 
-	let metalsHTML = "<div>"
-	for (const metal of metals) {
-		metalsHTML += `<div id=${metal.id}>
-        <input type="radio" name="metalsOptions" value=${metal.id}/>
-        ${metal.metal}
-        </div>`
-	}
+	let metalsHTML = ""
 
-	metalsHTML += "</div>"
+	// Use map() to generate new array of strings
+	const divStringArray = metals.map((metalObj) => {
+		return `<div>
+                <input type='radio' name='metal' value='${metalObj.id}' /> ${metalObj.metal} </div>`
+	})
 
-	// return the HTML string
+	// This function needs to return a single string, not an array of strings
+	// use join() method
+	metalsHTML += divStringArray.join("")
 
 	return metalsHTML
 }
