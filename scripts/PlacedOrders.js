@@ -6,9 +6,9 @@ export const Orders = async () => {
 
 	const ordersArray = orders.map((order) => {
 		return `<section id=${order.id} class=order> Order: ${order.id}
-        <div>Metal: ${order.metal}</div>
-        <div>Size: ${order.carets}</div>
-        <div>Style: ${order.style}</div>
+        <div>Metal: ${order.metalId}</div>
+        <div>Size: ${order.sizeId}</div>
+        <div>Style: ${order.styleId}</div>
         </section>`
 	})
 
