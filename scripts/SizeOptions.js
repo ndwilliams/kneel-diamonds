@@ -2,15 +2,15 @@ export const SizeOptions = async () => {
 	const response = await fetch("http://localhost:8088/sizes")
 	const sizes = await response.json()
 
-	let sizesHTML = "<div>"
-	for (const size of sizes) {
-		sizesHTML += `<div id=${size.id}>
-            <input type="radio" name="sizesOptions" value=${size.id}/>
-            ${size.carets}
+	let sizesHTML = ""
+	const divStringArray = sizes.map((sizeObj) => {
+		return `<div id=${sizeObj.id}>
+            <input type="radio" name="sizesOptions" value=${sizeObj.id}/>
+            ${sizeObj.carets}
             </div>`
-	}
+	})
 
-	sizesHTML += "</div>"
+	sizesHTML += divStringArray.join("")
 
 	return sizesHTML
 }
