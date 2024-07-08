@@ -1,4 +1,5 @@
 import { MetalOptions } from "./MetalOptions.js"
+import { PlaceOrder } from "./PlaceOrder.js"
 import { SizeOptions } from "./SizeOptions.js"
 import { StyleOptions } from "./StyleOptions.js"
 
@@ -8,6 +9,7 @@ const render = async () => {
 	const metalOptionsHTML = await MetalOptions()
 	const stylesOptionsHTML = await StyleOptions()
 	const sizesOptionsHTML = await SizeOptions()
+	const placeOrderHTML = PlaceOrder()
 
 	const composedHTML = `
         <h1>Kneel Diamonds</h1>
@@ -30,7 +32,7 @@ const render = async () => {
         </article>
 
         <article class="order">
-
+            ${placeOrderHTML}
         </article>
 
         <article class="customOrders">
@@ -41,5 +43,7 @@ const render = async () => {
 
 	container.innerHTML = composedHTML
 }
+
+document.addEventListener("newOrderPlaced", render)
 
 render()

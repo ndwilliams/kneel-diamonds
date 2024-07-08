@@ -13,7 +13,7 @@ export const MetalOptions = async () => {
 	// Use map() to generate new array of strings
 	const divStringArray = metals.map((metalObj) => {
 		return `<div>
-                <input type='radio' name='metal' value='${metalObj.id}' /> ${metalObj.metal} </div>`
+                <input type='radio' name='metalsOptions' value='${metalObj.id}' /> ${metalObj.metal} </div>`
 	})
 
 	// This function needs to return a single string, not an array of strings
@@ -25,7 +25,7 @@ export const MetalOptions = async () => {
 
 const handleMetalChoice = (event) => {
 	// Make sure you change this condition if you named your inputs differently
-	if (event.target.name === "metal") {
+	if (event.target.name === "metalsOptions") {
 		setMetal(parseInt(event.target.value))
 	}
 }
