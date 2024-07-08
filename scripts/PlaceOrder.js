@@ -7,5 +7,7 @@ export const PlaceOrder = () => {
 }
 
 const handlePlaceOrderClick = (clickEvent) => {
-	if (clickEvent.target.id === "placeOrder") placeOrder()
+	if (clickEvent.target.id === "placeOrder") {
+		placeOrder()
+	}
 }

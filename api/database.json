@@ -76,6 +76,12 @@
       "metal": 3,
       "carets": 2,
       "style": 1
+    },
+    {
+      "id": "bca6",
+      "metal": 2,
+      "carets": 1,
+      "style": 2
     }
   ]
 }
