@@ -1,5 +1,5 @@
 import { MetalOptions } from "./MetalOptions.js"
-import { PlaceOrder } from "./PlaceOrder.js"
+import { PlaceOrderButton } from "./PlaceOrder.js"
 import { SizeOptions } from "./SizeOptions.js"
 import { StyleOptions } from "./StyleOptions.js"
 
@@ -9,7 +9,7 @@ const render = async () => {
 	const metalOptionsHTML = await MetalOptions()
 	const stylesOptionsHTML = await StyleOptions()
 	const sizesOptionsHTML = await SizeOptions()
-	const placeOrderHTML = PlaceOrder()
+	const placeOrderHTML = PlaceOrderButton()
 
 	const composedHTML = `
         <h1>Kneel Diamonds</h1>

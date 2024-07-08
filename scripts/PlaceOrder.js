@@ -1,6 +1,6 @@
 import { placeOrder } from "./TransientState.js"
 
-export const PlaceOrder = () => {
+export const PlaceOrderButton = () => {
 	document.addEventListener("click", handlePlaceOrderClick)
 
 	return `<div><button id="placeOrder">Place Order</button></div>`
