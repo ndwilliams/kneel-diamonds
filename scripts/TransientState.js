@@ -1,24 +1,24 @@
 // set up transient state data structure and provide initial values
 const transientState = {
-	metal: 0,
-	carets: 0,
-	style: 0,
+	metalId: 0,
+	sizeId: 0,
+	styleId: 0,
 }
 
 // Functions to modify each property of transient state
 
 export const setStyle = (chosenStyle) => {
-	transientState.style = chosenStyle
+	transientState.styleId = chosenStyle
 	console.log(transientState)
 }
 
 export const setSize = (chosenSize) => {
-	transientState.carets = chosenSize
+	transientState.sizeId = chosenSize
 	console.log(transientState)
 }
 
 export const setMetal = (chosenMetal) => {
-	transientState.metal = chosenMetal
+	transientState.metalId = chosenMetal
 	console.log(transientState)
 }
 
